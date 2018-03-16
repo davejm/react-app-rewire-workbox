@@ -16,4 +16,20 @@
     "type": "git",
     "url": "git+https://github.com/davejm/react-app-rewire-workbox"
   },
+  "keywords": [
+    "react-app-rewired",
+    "react-app-rewire",
+    "workbox",
+    "workbox-webpack-plugin",
+    "webpack",
+    "create-react-app",
+    "react",
+    "service-worker",
+    "progressive-web-app",
+    "pwa"
+  ],
+  "homepage": "https://github.com/davejm/react-app-rewire-workbox",
+  "bugs": {
+    "url": "https://github.com/davejm/react-app-rewire-workbox/issues"
+  }
 }
