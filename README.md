@@ -90,4 +90,4 @@ For your convenience the default configs for both functions are also exported so
 
 ## License
 
-Licensed under the MIT License, Copyright ©️ 2018 David Moodie. See [LICENSE.md](LICENSE.md) for more information.
+Licensed under the MIT License, Copyright ©️ 2018 David Moodie. See [LICENSE](LICENSE) for more information.
