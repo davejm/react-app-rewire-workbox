@@ -4,9 +4,9 @@ Add the [`workbox-webpack-plugin`](https://github.com/GoogleChrome/workbox) to y
 
 By default, create react app uses SWPrecacheWebpackPlugin under the hood to generate a service worker which pre-caches your app shell and assets. sw-precache and sw-toolbox are being phased out in favour of Workbox so ideally we'd like to use Workbox instead!
 
-Create react app also doesn't let you customise your service worker AT ALL! This plugin allows you to easily use the GenerateSW and InjectManifest functions from Workbox Webpack plugin. See [here](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin) for details on the configuration options for each method.
+Create react app also doesn't let you customise your service worker AT ALL! This plugin allows you to easily use the `GenerateSW` and `InjectManifest` functions from Workbox Webpack plugin. See [here](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin) for details on the configuration options for each method.
 
-This plugin will remove the SWPrecacheWebpackPlugin from the Webpack plugin configuration and add the Workbox GenerateSW/InjectManifest plugin with your desired configuration.
+This plugin will remove the SWPrecacheWebpackPlugin from the Webpack plugin configuration and add the Workbox `GenerateSW` and `InjectManifest` plugin with your desired configuration.
 
 ## Installation
 
