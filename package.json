@@ -11,5 +11,9 @@
   "dependencies": {
     "webpack": "^4.1.1",
     "workbox-webpack-plugin": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davejm/react-app-rewire-workbox"
+  },
 }
