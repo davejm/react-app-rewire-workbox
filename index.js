@@ -1,9 +1,13 @@
 const workboxPlugin = require('workbox-webpack-plugin')
 
-const defaultConfig = {
+const defaultGenerateConfig = {
   exclude: [/\.map$/, /^(?:asset-)manifest.*\.js(?:on)?$/],
   navigateFallback: '/index.html',
   navigateFallbackWhitelist: [/^(?!\/__).*/]
+}
+
+const defaultInjectConfig = {
+  exclude: defaultGenerateConfig.exclude
 }
 
 function findSWPrecachePlugin(element) {
@@ -19,7 +23,7 @@ function removeSWPrecachePlugin(config) {
 }
 
 function rewireWorkboxGenerate(workboxConfig) {
-  workboxConfig = workboxConfig || defaultConfig
+  workboxConfig = workboxConfig || defaultGenerateConfig
   return function rewireWorkboxInner(config, env) {
     removeSWPrecachePlugin(config)
 
@@ -31,7 +35,7 @@ function rewireWorkboxGenerate(workboxConfig) {
 }
 
 function rewireWorkboxInject(workboxConfig) {
-  workboxConfig = workboxConfig || {exclude: defaultConfig.exclude}
+  workboxConfig = workboxConfig || defaultInjectConfig
   return function rewireWorkboxInner(config, env) {
     removeSWPrecachePlugin(config)
 
@@ -42,4 +46,9 @@ function rewireWorkboxInject(workboxConfig) {
   }
 }
 
-module.exports = {rewireWorkboxGenerate, rewireWorkboxInject}
+module.exports = {
+  rewireWorkboxGenerate,
+  rewireWorkboxInject,
+  defaultGenerateConfig,
+  defaultInjectConfig
+}
