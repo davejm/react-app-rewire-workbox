@@ -1,0 +1,15 @@
+{
+  "name": "react-app-rewire-workbox",
+  "version": "1.0.0",
+  "description": "Adds support for service worker generation via Google Workbox webpack plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Moodie",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^4.1.1",
+    "workbox-webpack-plugin": "^3.0.0"
+  }
+}
