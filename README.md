@@ -52,38 +52,26 @@ That's it, you now have Workbox for all your service worker / 'progressive web a
 
 Two functions are exported from this module: `rewireWorkboxGenerate` and `rewireWorkboxInject`. For info on how each Webpack plugin works, see the [Google documentation](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin).
 
-If you call either function with no parameters, it will set a default configuration that works well with create-react-app. If you would like to add custom config, pass it in as the parameter e.g.
+If you call either function with no parameters, it will set a default configuration that works well with create-react-app. If you would like to add a custom config, pass it in as the parameter e.g.
 
 ```js
-const {rewireWorkboxGenerate} = require('react-app-rewire-workbox');
+const {rewireWorkboxInject, defaultInjectConfig} = require('react-app-rewire-workbox');
+const path = require('path');
 
 module.exports = function override(config, env) {
   if (env === "production") {
     console.log("Production build - Adding Workbox for PWAs");
+    // Extend the default injection config with required swSrc
     const workboxConfig = {
-      // Define runtime caching rules.
-      runtimeCaching: [
-        {
-          // Match any request ends with .png, .jpg, .jpeg or .svg.
-          urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-
-          // Apply a cache-first strategy.
-          handler: 'cacheFirst',
-
-          options: {
-            // Only cache 10 images.
-            expiration: {
-              maxEntries: 10,
-            },
-          },
-        },
-      ]
+      ...defaultInjectConfig,
+      swSrc: path.join(__dirname, 'src', 'custom-sw.js')
     };
-    config = rewireWorkboxGenerate(workboxConfig)(config, env);
+    config = rewireWorkboxInject(workboxConfig)(config, env);
   }
 
   return config;
 };
+
 ```
 
 For your convenience the default configs for both functions are also exported so you can easily override them. They are exported as `defaultGenerateConfig` and `defaultInjectConfig`.
