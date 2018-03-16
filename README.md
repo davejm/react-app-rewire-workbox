@@ -1,4 +1,4 @@
-# `react-app-rewire-workbox`
+# react-app-rewire-workbox
 
 Add the [`workbox-webpack-plugin`](https://github.com/GoogleChrome/workbox) to your `create-react-app` app via [`react-app-rewired`](https://github.com/timarney/react-app-rewired) **without having to eject OR fork**.
 
