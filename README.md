@@ -1,5 +1,7 @@
 # react-app-rewire-workbox
 
+[![npm](https://img.shields.io/npm/v/react-app-rewire-workbox.svg)](https://www.npmjs.com/package/react-app-rewire-workbox)
+
 Add the [`workbox-webpack-plugin`](https://github.com/GoogleChrome/workbox) to your `create-react-app` app via [`react-app-rewired`](https://github.com/timarney/react-app-rewired) **without having to eject OR fork**.
 
 By default, create react app uses SWPrecacheWebpackPlugin under the hood to generate a service worker which pre-caches your app shell and assets. sw-precache and sw-toolbox are being phased out in favour of Workbox so ideally we'd like to use Workbox instead!
