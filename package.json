@@ -1,6 +1,6 @@
 {
   "name": "react-app-rewire-workbox",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Adds support for service worker generation via Google Workbox webpack plugin",
   "main": "index.js",
   "scripts": {
