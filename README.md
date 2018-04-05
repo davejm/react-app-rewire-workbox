@@ -11,10 +11,11 @@ This plugin will remove the SWPrecacheWebpackPlugin from the Webpack plugin conf
 ## Installation
 
 ```sh
-npm install --save react-app-rewire-workbox
+yarn add workbox-webpack-plugin # OR npm install --save workbox-webpack-plugin
+yarn add react-app-rewire-workbox # OR npm install --save react-app-rewire-workbox
 
-# If you don't already, you also need:
-npm install --save react-app-rewired
+# If you don't have it already already, you also need:
+yarn add react-app-rewired # OR npm install --save react-app-rewired
 ```
 
 ## Usage
