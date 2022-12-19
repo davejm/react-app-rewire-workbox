@@ -3,7 +3,7 @@ const workboxPlugin = require('workbox-webpack-plugin')
 const defaultGenerateConfig = {
   exclude: [/\.map$/, /^(?:asset-)manifest.*\.js(?:on)?$/],
   navigateFallback: '/index.html',
-  navigateFallbackBlacklist: [
+  navigateFallbackDenylist: [
     new RegExp('^/__'),
     new RegExp('/[^/]+\.[^/]+$'),
   ],
